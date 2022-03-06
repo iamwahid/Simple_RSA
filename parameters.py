@@ -8,7 +8,6 @@ def is_prime(x):
 
 # get list of prime numbers
 def get_prime_numbers(x, y):
-    import random
     result = []
 
     while len(result) < 4:
