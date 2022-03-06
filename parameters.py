@@ -6,6 +6,7 @@ def is_prime(x):
             return False
     return True
 
+# get list of prime numbers
 def get_prime_numbers(x, y):
     import random
     result = []
@@ -23,10 +24,11 @@ def get_prime_numbers(x, y):
 def format_byte(val):
     return '{0:016b}'.format(val)
 
-# get prime number until 100
+# get prime number of 16 bits
 # the bigger the number, the more time it takes
-prime_list = get_prime_numbers(0, 100)
+prime_list = get_prime_numbers(0, 65535)
 
+# select 2 prime numbers from the list
 q = random.choice(prime_list)
 
 # remove q from prime_list
@@ -65,10 +67,10 @@ d = get_d(e, Phi_N)
 
 # print all the parameters
 def show_parameters():
-    print("p: {}, {}".format( p, format_byte(p) ))
-    print("q: {}, {}".format( q, format_byte(q) ))
-    print("N: {}, {}".format( N, format_byte(N) ))
-    print("Phi(N): {}, {}".format( Phi_N, format_byte(Phi_N) ))
-    print("public key e: {}, {}".format( e, format_byte(e) ))
-    print("private key d: {}, {}".format( d, format_byte(d) ))
-    print("N, e: {} ({}), {} ({})".format( N, format_byte(N), e, format_byte(e) ))
+    print("p: {}".format(p))
+    print("q: {}".format(q))
+    print("N: {}".format(N))
+    print("Phi(N): {}".format(Phi_N))
+    print("public key e: {}".format(e))
+    print("private key d: {}".format(d))
+    print("N, e: {}, {}".format(N, e))
